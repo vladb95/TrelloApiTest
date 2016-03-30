@@ -1,0 +1,19 @@
+{
+  "name": "TrelloApiTest",
+  "homepage": "https://github.com/vladb95/TrelloApiTest",
+  "description": "",
+  "main": "main.js",
+  "moduleType": [],
+  "authors": [
+    "vladb9582"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
