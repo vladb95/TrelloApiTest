@@ -75,9 +75,9 @@ function mainFact($q, $http, KEY, TOKEN){
         console.log(error);
       });
       return defer.promise;
-    }
+    },
     trackLists:function(firstListId, secondListId){
-      
+
     }
   };
 
