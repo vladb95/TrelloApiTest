@@ -1,10 +1,21 @@
 <!doctype html>
 <html>
   <head>
-
+    <link rel="stylesheet" href="css/dest.css">
   </head>
   <body ng-app="trelloApp" ng-controller="mainController as vm" ng-init="vm.init()">
-
+      <div class="row">
+        <div class="col s3">
+          <ul class="collection">
+            <li class="collection-item" ng-repeat="item in vm.lists" ng-click="vm.getList(item.id)">{{item.name}}</li>
+          </ul>
+        </div>
+        <div class="col s3">
+          <ul class="collection" ng-show="vm.cards.length>0">
+            <li class="collection-item" ng-repeat="card in vm.cards">{{card.desc}} <span class="badge"></span></li>
+          </ul>
+        </div>
+      </div>
   </body>
   <script type="text/javascript" src="js/requirences.js"></script>
   <script type="text/javascript" src="main.js"></script>

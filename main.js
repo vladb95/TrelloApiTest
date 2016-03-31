@@ -7,14 +7,20 @@ angular.module('trelloApp').controller('mainController', mainCtrl);
 mainCtrl.$inject = ['mainFactory'];
 function mainCtrl(mainFactory){
   var vm = this;
+  vm.lists = [];
+  vm.cards = [];
 
   vm.init = function(){
     mainFactory.getBoards('mhTJZBYQ').then(function(data){
-      console.log(data);
+      vm.lists = data.lists;
     });
-    mainFactory.getLists('56f3af1d4449dcaaa1c1fc6d').then(function(data){
-      console.log(data);
-    })
+  }
+
+  vm.getList = function(listId){
+    mainFactory.getLists(listId).then(function(data){
+      vm.cards = data.cards;
+      console.log(vm.cards);
+    });
   }
 }
 
