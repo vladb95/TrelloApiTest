@@ -6,6 +6,7 @@ var reqirences = [
   'bower_components/angular/angular.min.js',
   'bower_components/angular-materialize/src/angular-materialize.js',
   'bower_components/materialize/bin/materialize.js',
+  'bower_components/angular-cookie/angular-cookie.min.js',
 ];
 
 var css = [
